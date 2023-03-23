@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="shortcut icon" type="image" href="causeve.png">
+
+    <script src="https://kit.fontawesome.com/cde0fd6c1d.js" crossorigin="anonymous"></script>
+    <title>Causeve</title>
+</head>
+
+<body>
+    <section class="header">
+        <header>
+
+            <a href="#" class="logo">Causeve</a>
+
+            <input type="checkbox" id="menu-bar">
+            <label for="menu-bar">Menu</label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="#">Web Solutions <i class="fa-solid fa-caret-down"></i></a>
+                        <ul>
+                            <li>
+                                <a href="#">Web Design and Development <i class="fa-solid fa-caret-down"></i></a>
+                                <ul>
+                                    <li><a href="brandingwebdesign.html">Branding Web Design</a></li>
+                                    <li><a href="corporatewebdesign.html">Corporate Web Design</a></li>
+                                    <li><a href="responsivewebdesign.html">Responsive Web Design</a></li>
+                                    <li><a href="cmswebdesign.html">CMS Web Design / WordPress</a></li>
+                                    <li><a href="landingpagedevelopment.html">Landing Page Development</a></li>
+                                    <li><a href="websitemaintainanceservices.html">Web Maintenance Services</a></li>
+                                </ul>
+                            </li>
+                            <li> <a href="ecommerce.html">E-Commerce Web Development</a>
+                            </li>
+                            <li> <a href="onlinepayment.html">Online Payment Solutions</a>
+                            </li>
+                            <li> <a href="domain&hosting.html">Domain & Hosting</a>
+                            </li>
+                            <li> <a href="digitalgraphicdesign.html">Digital Graphic Design</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Digital Marketing <i class="fa-solid fa-caret-down"></i></a>
+                        <ul>
+                            <li><a href="sem.html">Search Engine Marketing(SEM)</a></li>
+                            <li><a href="seo.html">Search Engine Optimization(SEO)</a></li>
+                            <li><a href="smm.html">Search Media Marketing (SMM)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="ourworks.html">Our Work</a></li>
+                    <li><a href="career.html">Career</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!-- -----------------About section starts here use that video link there is a illustrator file---------------------- -->
+
+
+
+    <!------------------add as many div you want it works perfectly---------->
+    <div class="about-container">
+        <div class="slide-container active">
+            <div class="slide">
+                <div class="content">
+                    <h3>01. What we do</h3>
+                    <p>Causeve is a Professional web designing and web development company CHENNAI, which is offers a full facility for designing a website at a reasonable price. We provide flawless services in website development, creative logo designs,
+                        online marketing, Website redesigning techniques and even advanced classified portal development with our web development experts CHENNAI.<br><br> The most eye-catching feature of our services is the Self-Update Console or CMS
+                        (Content Management System) for your web design. The benefit is that the possibility to make suitable changes to your own website whenever required. The layouts given to our websites are outstanding complementing the system. By
+                        using this facility, our thousands of clients keeps their website updated swiftly and suitably. The best part is you do not need to pay overpriced bills to make accessible changes on your own website and you can do it any time.
+                        For better experience and comfort in difficulties, our company support is always open to assist.
+                        <br><br> Causeve solves our clients' toughest challenges by providing unmatched services in strategy, consulting, digital, technology and operations. we deliver transformational outcomes for a demanding new digital world.
+                    </p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+                <div class="image">
+                    <img src="background-image.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>02. Our Vision</h3>
+                    <p>We envision a world in which every aspect of our lives is enhanced by top-notch software products, ranging from practical IT solutions to effective mobile apps & valuable online tools.
+                        <br><br>We don’t shy away from admitting that we are driven by the industry-wide cliché of making the world a better place, one software solution at a time.<br><br>We diligently play our part in making this vision a reality, whether
+                        by developing in-house projects or working for our customers, in order to bring their ideas to life.
+                    </p>
+                    <a href="#" class="btn">Learn more</a>
+                </div>
+                <div class="image">
+                    <img src="about.jpeg">
+                </div>
+            </div>
+        </div>
+        <div class="slide-container">
+            <div class="slide">
+                <div class="content">
+                    <h3>03. Nice To Meet You
+                    </h3>
+                    <p>We are a mix of tech enthusiasts, software experts, product visionaries, and design magicians, bound together by a shared passion for developing innovative software products.<br><br>Each project is unique and we are committed to find
+                        the ideal solutions to accomplish our partners' goals.
+                    </p><a href="#" class="btn">Learn more</a>
+                </div>
+                <div class="image">
+                    <img src="background-image.jpg">
+                </div>
+            </div>
+        </div>
+        <div id="prev" onclick="prev()">
+            < </div>
+                <div id="next" onclick="next()"> > </div>
+        </div>
+
+        <script>
+            let slides = document.querySelectorAll('.slide-container');
+            let index = 0;
+
+            //next function
+            function next() {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }
+
+            //previous function
+            function prev() {
+                slides[index].classList.remove('active');
+                index = (index - 1 + slides.length) % slides.length;
+                slides[index].classList.add('active');
+            }
+
+            //autoplay......................
+            setInterval(next, 7000); //slides changes every 7 seconds
+        </script>
+        <!--------------------------------------testimonials-------------------->
+        <article>
+            <div class="heading-testimonial"><b>Our </b>Testimonials</div>
+            <div class="wrapper">
+                <div class="container-testimonials">
+                    <div class="profile">
+                        <div class="imageBox">
+                            <img src="testimonial-1.jpg">
+                        </div>
+                        <h2>Person 1</h2>
+                    </div>
+                    <p><span class="fa fa-quote-left left"></span>Working with this software development company was an absolute pleasure. They were able to take our ideas and turn them into a working software product faster than we ever thought possible.
+                        <span class="fa fa-quote-right right"></span>
+                    </p>
+                </div>
+                <div class="container-testimonials">
+                    <div class="profile">
+                        <div class="imageBox">
+                            <img src="testimonial-2.jpg">
+                        </div>
+                        <h2>Person 2</h2>
+                    </div>
+                    <p><span class="fa fa-quote-left left"></span>We've been working with this software development company for several years now, and we couldn't be happier with the level of service they provide. Their team is highly skilled and always
+                        up-to-date on the latest technology trends, which allows us to stay ahead of the competition.
+                        <span class="fa fa-quote-right right"></span>
+                    </p>
+                </div>
+                <div class="container-testimonials">
+                    <div class="profile">
+                        <div class="imageBox">
+                            <img src="testimonial-3.jpg">
+                        </div>
+                        <h2>Person 3</h2>
+                    </div>
+                    <p><span class="fa fa-quote-left left"></span>I was blown away by the quality of work this software development company delivered. They really took the time to understand our needs and designed a solution that exceeded our expectations.
+                        <span class="fa fa-quote-right right"></span>
+                    </p>
+                </div>
+            </div>
+        </article>
+        <!-- -----------------About section ends here---------------------- -->
+
+
+        <!-- -----------------Footer---------------------- -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-row">
+                    <div class="footer-col">
+                        <h4>CAUSEVE</h4>
+                        <ul>
+                            <li>
+                                <p style="font-size: 13px">We have been shaping the World Wide Web since 2017. From simple presentation websites to complex web applications, our team of full-stack web developers is ready to craft effective web experiences that delight visitors
+                                    and meet business requirements.</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Web Design</a></li>
+                            <li><a href="#">Web Development Services</a></li>
+                            <li><a href="#">Custom Programming</a></li>
+                            <li><a href="#">Search Engine Optimization</a></li>
+                            <li><a href="#">Content Management</a></li>
+                            <li><a href="#">E-Commerce</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Our Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Works</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Terms and Conditions</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</body>
+
+</html>
